@@ -1,10 +1,11 @@
 # Configuration file for the Sphinx documentation builder.
 
+master_doc = "index"
+
 # -- Project information
 
-project = 'Lumache'
-copyright = '2021, Graziella'
-author = 'Graziella'
+project = 'test example'
+author = 'jane doe'
 
 release = '0.1'
 version = '0.1.0'
@@ -12,11 +13,12 @@ version = '0.1.0'
 # -- General configuration
 
 extensions = [
-    'sphinx.ext.duration',
-    'sphinx.ext.doctest',
-    'sphinx.ext.autodoc',
-    'sphinx.ext.autosummary',
-    'sphinx.ext.intersphinx',
+    "myst_parser",
+    "sphinx.ext.duration",
+    "sphinx.ext.doctest",
+    "sphinx.ext.autodoc",
+    "sphinx.ext.autosummary",
+    "sphinx.ext.intersphinx",
 ]
 
 intersphinx_mapping = {
@@ -27,9 +29,11 @@ intersphinx_disabled_domains = ['std']
 
 templates_path = ['_templates']
 
+source_suffix = ['.rst', '.md']
+
 # -- Options for HTML output
 
-html_theme = 'sphinx_rtd_theme'
+html_theme = 'furo'
 
 # -- Options for EPUB output
 epub_show_urls = 'footnote'
